@@ -1,0 +1,1 @@
+wget -O log_prod_last,json https://matomo.tools.factory.social.gouv.fr/index.php\?module\=API\&method\=Live.getLastVisitsDetails\&idSite\=4\&period\=day\&date\=today\&format\=JSON\&token_auth\=anonymous

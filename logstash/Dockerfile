@@ -7,5 +7,5 @@ FROM docker.elastic.co/logstash/logstash:${ELK_VERSION}
 RUN logstash-plugin install logstash-filter-json
 RUN logstash-plugin install logstash-filter-prune
 RUN logstash-plugin install logstash-filter-ruby
-RUN logstash-plugin install logstash-filter-mutate
+RUN logstash-plugin install logstash-filter-date
 RUN logstash-plugin install logstash-input-http_poller
