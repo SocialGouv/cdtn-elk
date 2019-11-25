@@ -16,7 +16,7 @@ services:
         target: /usr/share/elasticsearch/data
     ports:
       - "9200:9200"
-      - "9300:9300"
+      - "9301:9300"
     environment:
       ES_JAVA_OPTS: "-Xmx256m -Xms256m"
       ELASTIC_PASSWORD: changeme
@@ -38,10 +38,10 @@ services:
         target: /usr/share/logstash/pipeline
         read_only: true
     ports:
-      - "5000:5000"
-      - "9600:9600"
+      - "5001:5000"
+      - "9601:9600"
     environment:
-      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+      ES_JAVA_OPTS: "-Xmx1024m -Xms1024m"
     networks:
       - elk
     depends_on:
